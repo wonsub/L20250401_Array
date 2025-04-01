@@ -4,30 +4,31 @@ using namespace std;
 
 int main()
 {
+	float Range = 9.3f;
+	float AttackRange = 1.5f;
 
-	int Goblins[4] = { 1,2,3,4 };
-	float MP[10] = { 0, };
-	char Diamonds[10] = { 0, };
-	bool Condition = 3 != 3;
+	bool Seeing = true;
+	bool Attack = false;
 
 
+	//FSM, Behavior Tree -> 기획자
 
-	for (int i = 0; i < 4; i++)
+	if (Range)
 	{
-		Goblins[i] = i;
-		cout << Goblins[i] << endl;
+		if (Attack)
+		{
+			cout << "공격한다." << endl;
+
+		}
+		else
+		{
+			cout << "쫒아간다" << endl;
+		}
 	}
 
-	for (int i = 0; i < 10; i++)
+	else 
 	{
-		MP[i] = i;
-		cout << MP[i] << endl;
-	}
-
-	for (int i = 0; i < 10; i++)
-	{
-		Diamonds[i] = i;
-		cout << Diamonds[i] << endl;
+		cout << "못찾음" << endl;
 	}
 
 	return 0;
