@@ -3,81 +3,36 @@
 
 using namespace std;
 
+char Input()
+{
+	char Key;
+	cin >> Key;
+	return Key;
+}
+
+void Render()
+{
+	cout << "ÂûÄ¬" << endl;
+}
+
 int main()
 {
+	bool IsRunning = true;
+	char Key = 0;
 
-	int MaxCount = 0;
-
-	cin >> MaxCount;
-
-	/**
-	**
-	***
-	****
-	******/
-	for (int j = 0; j < MaxCount; j++)
+	while(IsRunning)
 	{
-		for (int i = 0; i <= j; i++)
+		Key = Input();
+		if (Key == 'Q')
 		{
-
-			cout << "*";
+			IsRunning = false;
+			cout << "Å»Ãâ" << endl;
 		}
-		cout << endl;
+		
+		Render();
 	}
 
-	cout << endl;
-
-
-
-	//*****		
-	//****
-	//***
-	//**
-	//*
-
-	for (int j = 0; j <MaxCount; j++)
-	{
-		for (int i = 0; i < MaxCount -j; i++)
-		{
-
-			cout << "*";
-		}
-		cout << endl;
-	}
-
-	cout << endl;
-
-
-
-	//*****
-	// ****
-	//  ***
-	//   **
-	//	  *
-	for (int j = 0; j < MaxCount; j++)
-	{
-		for (int i = 0; i < j; i++)
-		{
-
-			cout << " ";
-		}
-		for (int i = 0; i < MaxCount - j; i++)
-		{
-			cout << "*";
-			
-		}
 	
-		cout << endl;
-	}
-
-
-
-
-	
-	
-
-
-
 
 	return 0;
 
