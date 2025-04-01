@@ -1,35 +1,75 @@
 #include <iostream>
+#include <conio.h >
 
 using namespace std;
 
 int main()
 {
-	float Range = 9.3f;
-	float AttackRange = 1.5f;
+	int PlayerX = 1;
+	int PlayerY = 1;
 
-	bool Seeing = true;
-	bool Attack = false;
-
-
-	//FSM, Behavior Tree -> 기획자
-
-	if (Range)
+	
+	int map[10][10] = 
 	{
-		if (Attack)
-		{
-			cout << "공격한다." << endl;
+		{ 1,1,1,1,1,1,1,1,1,1 },
+		{ 1,0,0,0,0,0,0,0,0,1 },
+		{ 1,0,0,0,0,0,0,0,0,1 },
+		{ 1,0,0,0,0,0,0,0,0,1 },
+		{ 1,0,0,0,0,0,0,0,0,1 },
+		{ 1,0,0,0,0,0,0,0,0,1 },
+		{ 1,0,0,0,0,0,0,0,0,1 },
+		{ 1,0,0,0,0,0,0,0,0,1 },
+		{ 1,0,0,0,0,0,0,0,0,1 },
+		{ 1,1,1,1,1,1,1,1,1,1 }
+	};
 
-		}
-		else
+
+
+	//PlayerX++;
+	//for (int y = 0; y < 10; y++)
+	//{
+	//		
+	//	PlayerX++;
+	//	for (int x = 0; x < 10; x++)
+	//	{
+	//			
+	//		{
+	//			cout << map[y][x];
+	//		}
+	//	}
+	//	cout << endl;
+	//}
+
+
+	
+	for (int j = 0; j < 5; j++)
+	{
+		for (int i = 0; i <= j; i++)
 		{
-			cout << "쫒아간다" << endl;
+
+			cout << "*";
 		}
+		cout << endl;
 	}
 
-	else 
+	cout << endl;
+
+	for (int j = 5; j > 0; j--)
 	{
-		cout << "못찾음" << endl;
+		for (int i = 0; i < j; i++)
+		{
+
+			cout << "*";
+		}
+		cout << endl;
 	}
+
+
+	
+	
+
+
+
 
 	return 0;
 
